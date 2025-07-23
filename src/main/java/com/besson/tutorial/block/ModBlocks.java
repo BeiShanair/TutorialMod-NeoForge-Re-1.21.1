@@ -16,11 +16,11 @@ public class ModBlocks {
             DeferredRegister.createBlocks(TutorialMod.MOD_ID);
 
     public static final DeferredBlock<Block> ICE_ETHER_BLOCK =
-            registerBlock("ice_ether_block", () -> new Block(Block.Properties.of().strength(3.0F, 3.0F)));
+            registerBlock("ice_ether_block", () -> new Block(Block.Properties.of().strength(3.0F, 3.0F).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> RAW_ICE_ETHER_BLOCK =
             registerBlock("raw_ice_ether_block", () -> new Block(Block.Properties.of().strength(2.0F, 3.0F)));
     public static final DeferredBlock<Block> ICE_ETHER_ORE =
-            registerBlock("ice_ether_ore", () -> new Block(Block.Properties.of().strength(1.5F, 0.5F)));
+            registerBlock("ice_ether_ore", () -> new Block(Block.Properties.of().strength(1.5F, 0.5F).requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> blocks = BLOCKS.register(name, block);
