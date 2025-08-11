@@ -29,6 +29,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CORN);
                         output.accept(ModItems.STRAWBERRY);
                         output.accept(ModItems.CHEESE);
+                        output.accept(ModItems.ANTHRACITE);
+                        output.accept(ModItems.ANTHRACITE2);
                     }).build());
 
     public static final Supplier<CreativeModeTab> MATERIALS =
