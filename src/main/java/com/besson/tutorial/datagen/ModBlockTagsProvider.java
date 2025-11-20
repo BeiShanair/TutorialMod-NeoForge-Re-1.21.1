@@ -2,6 +2,7 @@ package com.besson.tutorial.datagen;
 
 import com.besson.tutorial.TutorialMod;
 import com.besson.tutorial.block.ModBlocks;
+import com.besson.tutorial.tag.ModBlockTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
@@ -28,5 +29,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.FENCES).add(ModBlocks.ICE_ETHER_FENCE.get());
         tag(BlockTags.FENCE_GATES).add(ModBlocks.ICE_ETHER_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.ICE_ETHER_WALL.get());
+
+        tag(ModBlockTags.ORE_TAGS)
+                .add(ModBlocks.ICE_ETHER_ORE.get())
+                .addTag(BlockTags.COAL_ORES)
+                .addTag(BlockTags.IRON_ORES)
+                .addTag(BlockTags.GOLD_ORES)
+                .addTag(BlockTags.DIAMOND_ORES)
+                .addTag(BlockTags.EMERALD_ORES)
+                .addTag(BlockTags.LAPIS_ORES)
+                .addTag(BlockTags.REDSTONE_ORES);
+
     }
 }
