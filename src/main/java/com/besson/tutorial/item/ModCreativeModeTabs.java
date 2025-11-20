@@ -31,6 +31,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.CHEESE);
                         output.accept(ModItems.ANTHRACITE);
                         output.accept(ModItems.ANTHRACITE2);
+                        output.accept(ModItems.PROSPECTOR);
 
                         output.accept(ModBlocks.ICE_ETHER_STAIRS);
                         output.accept(ModBlocks.ICE_ETHER_SLAB);

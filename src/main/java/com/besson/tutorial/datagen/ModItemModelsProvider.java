@@ -27,6 +27,7 @@ public class ModItemModelsProvider extends ItemModelProvider {
 
         basicItem(ModItems.ANTHRACITE.get());
         basicItem(ModItems.ANTHRACITE2.get());
+        basicItem(ModItems.PROSPECTOR.get());
 
         buttonItem(ModBlocks.ICE_ETHER_BUTTON, ModBlocks.ICE_ETHER_BLOCK);
         fenceItem(ModBlocks.ICE_ETHER_FENCE, ModBlocks.ICE_ETHER_BLOCK);
