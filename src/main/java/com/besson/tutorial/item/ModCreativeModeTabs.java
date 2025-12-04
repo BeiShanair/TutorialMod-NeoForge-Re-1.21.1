@@ -48,6 +48,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.FIRE_ETHER_AXE);
                         output.accept(ModItems.FIRE_ETHER_PICKAXE);
                         output.accept(ModItems.FIRE_ETHER_HOE);
+
+                        output.accept(ModItems.PICKAXE_AXE_ITEM);
                     }).build());
 
     public static final Supplier<CreativeModeTab> MATERIALS =

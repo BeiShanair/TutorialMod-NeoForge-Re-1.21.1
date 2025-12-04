@@ -40,5 +40,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .addTag(BlockTags.LAPIS_ORES)
                 .addTag(BlockTags.REDSTONE_ORES);
 
+        tag(ModBlockTags.PICKAXE_AXE_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE);
     }
 }

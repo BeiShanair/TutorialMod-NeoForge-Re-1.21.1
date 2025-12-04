@@ -42,6 +42,8 @@ public class ModItemModelsProvider extends ItemModelProvider {
         handheldItem(ModItems.FIRE_ETHER_AXE);
         handheldItem(ModItems.FIRE_ETHER_PICKAXE);
         handheldItem(ModItems.FIRE_ETHER_HOE);
+
+        handheldItem(ModItems.PICKAXE_AXE_ITEM);
     }
 
     private void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> base) {
