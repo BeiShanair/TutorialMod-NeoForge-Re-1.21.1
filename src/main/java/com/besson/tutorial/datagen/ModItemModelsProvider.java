@@ -5,7 +5,9 @@ import com.besson.tutorial.block.ModBlocks;
 import com.besson.tutorial.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -34,7 +36,14 @@ public class ModItemModelsProvider extends ItemModelProvider {
         wallItem(ModBlocks.ICE_ETHER_WALL, ModBlocks.ICE_ETHER_BLOCK);
 
         basicItem(ModBlocks.ICE_ETHER_DOOR.asItem());
+
+        handheldItem(ModItems.FIRE_ETHER_SWORD);
+        handheldItem(ModItems.FIRE_ETHER_SHOVEL);
+        handheldItem(ModItems.FIRE_ETHER_AXE);
+        handheldItem(ModItems.FIRE_ETHER_PICKAXE);
+        handheldItem(ModItems.FIRE_ETHER_HOE);
     }
+
     private void buttonItem(DeferredBlock<?> block, DeferredBlock<Block> base) {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/button_inventory"))
                 .texture("texture", ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,
@@ -49,5 +58,11 @@ public class ModItemModelsProvider extends ItemModelProvider {
         this.withExistingParent(block.getId().getPath(), mcLoc("block/wall_inventory"))
                 .texture("wall", ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,
                         "block/" + base.getId().getPath()));
+    }
+
+    private ItemModelBuilder handheldItem(DeferredItem<Item> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TutorialMod.MOD_ID,"item/" + item.getId().getPath()));
     }
 }
