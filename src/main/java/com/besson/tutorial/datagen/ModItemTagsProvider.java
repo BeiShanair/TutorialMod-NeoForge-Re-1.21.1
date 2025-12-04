@@ -6,6 +6,7 @@ import com.besson.tutorial.tag.ModItemTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -24,5 +25,11 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ModItemTags.SUGAR_TAG)
                 .add(ModItems.STRAWBERRY.asItem())
                 .add(Items.BEETROOT);
+
+        tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.ICE_ETHER_HELMET.get(),
+                        ModItems.ICE_ETHER_CHESTPLATE.get(),
+                        ModItems.ICE_ETHER_LEGGINGS.get(),
+                        ModItems.ICE_ETHER_BOOTS.get());
     }
 }
